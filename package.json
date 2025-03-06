@@ -12,10 +12,11 @@
   "keywords": [],
   "author": "DevCoreX",
   "license": "ISC",
-  "description": "",
+  "description": "Dev.X is a tool that automates the development of web applications. It is capable of generating components, APIs or complete websites based on templates and more.",
   "dependencies": {
     "chalk": "^5.4.1",
     "cli-table3": "^0.6.5",
-    "inquirer": "^12.3.1"
+    "inquirer": "^12.3.1",
+    "yargs": "^17.7.2"
   }
 }
