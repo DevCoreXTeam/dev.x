@@ -32,7 +32,7 @@ export default function Navbar({
   title = "DevCoreX",
   logo,
   items = DEFAULT_ITEMS,
-  variant = "inverse",
+  variant = "neutral",
   enableSearch = false,
   onSearch,
   className,
@@ -105,6 +105,7 @@ export default function Navbar({
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              className="py-1"
             />
             <Button
               variant="inverse"
@@ -158,11 +159,12 @@ export default function Navbar({
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                className="py-[2px]"
               />
               <Button
                 variant="inverse"
                 size="sm"
-                className="ml-2"
+                className="ml-2 px-3"
                 onClick={() => {
                   onSearch && onSearch(searchQuery);
                   setIsSearchOpen(false);
