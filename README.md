@@ -87,11 +87,21 @@ dev create <framework> --name <project-name>
 **Example:**
 
 ```bash
-dev create next --name next-app
+dev create express --name express-app
 ```
 
 ```bash
-dev create react -n react-app
+dev create nest -n nest-app
+```
+
+**Project for Termux:**
+
+```bash
+dev create next --name next-app --termux
+```
+
+```bash
+dev create react -n react-app -T
 ```
 
 **List Available Frameworks**
