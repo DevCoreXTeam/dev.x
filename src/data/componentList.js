@@ -8,10 +8,8 @@ export const componentList = [
     name: "Navbar",
     dependencies: [
       "react-icons",
-      "motion",
       "clsx",
       "tailwind-merge",
-      "@radix-ui/react-collapsible",
     ],
     internalDependencies: ["Button", "Input"],
   },

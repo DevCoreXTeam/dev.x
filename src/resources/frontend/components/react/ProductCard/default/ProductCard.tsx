@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 // react-icons
 import { BiSolidMinusCircle } from "react-icons/bi";
@@ -8,7 +8,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { FaCartArrowDown } from "react-icons/fa6";
 // Dev.X components
-import Button from "@/components/generated/Button";
+import Button from "../../components/generated/Button";
 import { useState, useEffect } from "react";
 
 interface CardProps {

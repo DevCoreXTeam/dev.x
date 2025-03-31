@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { cn } from "@/lib/utils";
-import Button from "@/components/generated/Button";
-import Input from "@/components/generated/Input";
+import { cn } from "../../lib/utils";
+import Button from "../../components/generated/Button";
+import Input from "../../components/generated/Input";
 
 export default function LoginCard({ variant = "neutral", onSubmit }) {
   const [email, setEmail] = useState("");
