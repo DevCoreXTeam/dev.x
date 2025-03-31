@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ReactNode, ButtonHTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 type ButtonStatus = "idle" | "loading" | "success" | "error";
 type ButtonVariant =
