@@ -4,13 +4,19 @@ import fs from "fs";
 export const createNextApp = async (name, termux) => {
   try {
     // create next app
-    execSync(`npx create-next-app@latest ${name}`, { stdio: "inherit" });
+    execSync(`npx create-next-app@latest ${name} --skip-install`, { stdio: "inherit" });
 
     // change directory
     process.chdir(name);
 
     // check termux environment
     if (termux) {
+      // install only compatible dependencies
+      execSync(
+        `npm install --ignore-scripts`,
+        { stdio: "inherit" }
+      );
+
       // check if tailwindcss is installed
       const isTailwindInstalled = (() => {
         try {
