@@ -32,6 +32,7 @@ By default, components are generated in:
 - `Navbar`
 - `LoginCard`
 - `ProductCard`
+- `RegisterCard`
 
 **Basic Usage**
 
