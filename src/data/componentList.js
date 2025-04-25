@@ -28,4 +28,9 @@ export const componentList = [
     dependencies: ["clsx", "tailwind-merge"],
     internalDependencies: ["Input", "Button"],
   },
+  {
+    name: "RegisterCard",
+    dependencies: ["clsx", "tailwind-merge"],
+    internalDependencies: ["Input", "Button"],
+  },
 ];
