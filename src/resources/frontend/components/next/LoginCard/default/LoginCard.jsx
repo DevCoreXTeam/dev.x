@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import Button from "@/components/generated/Button";
@@ -16,7 +17,12 @@ const variantClasses = {
     "bg-black/40 text-white backdrop-blur-sm focus:ring-gray-400 dark:bg-white/40 dark:text-black",
 };
 
-export default function LoginCard({ variant = "neutral", onSubmit }) {
+export default function LoginCard({
+  variant = "neutral",
+  onSubmit,
+  onForgotPassword,
+  onRegister,
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,14 +33,20 @@ export default function LoginCard({ variant = "neutral", onSubmit }) {
     }
   };
 
+  const handleForgotPassword = () => {
+    if (onForgotPassword) {
+      onForgotPassword();
+    }
+  };
+
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-md rounded-lg px-6 py-10 shadow-lg transition-all duration-300",
+        "mx-auto w-full max-w-md rounded-xl px-8 py-12 shadow-xl transition-all duration-300 sm:px-10",
         variantClasses[variant],
       )}
     >
-      <h2 className="mb-4 text-center text-2xl font-bold">Login</h2>
+      <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl">Login</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <Input
@@ -60,18 +72,35 @@ export default function LoginCard({ variant = "neutral", onSubmit }) {
             classNameContainer="my-4"
           />
           <div className="mb-2 flex justify-end">
-            <Button variant="link" size="sm" href="/forgot" className="text-xs">
+            <Button
+              variant="link"
+              size="sm"
+              href="/forgot"
+              className="text-xs sm:text-sm"
+              onClick={handleForgotPassword}
+            >
               Forgot your password?
             </Button>
           </div>
         </div>
-        <Button type="submit" variant="inverse" full={true}>
+        <Button
+          type="submit"
+          variant="inverse"
+          full={true}
+          className="py-2.5 sm:py-3 text-sm sm:text-base font-medium"
+        >
           Login
         </Button>
       </form>
-      <div className="mt-6 flex flex-col items-center text-center">
-        <span className="text-sm">Don't have an account?</span>
-        <Button variant="link" size="sm" href="/register" className="text-xs">
+      <div className="mt-8 flex flex-col items-center text-center">
+        <span className="text-sm sm:text-base">Don't have an account?</span>
+        <Button
+          variant="link"
+          size="sm"
+          href="/register"
+          className="text-xs sm:text-sm mt-1"
+          onClick={onRegister}
+        >
           Create an account
         </Button>
       </div>
